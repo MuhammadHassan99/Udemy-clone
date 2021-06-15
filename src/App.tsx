@@ -1,24 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./styles/index.scss";
+import "./App.css";
+import ContentHeader from "./components/content-header/ContentHeader";
+import Navbar from "./components/navbar/Navbar";
+import CourseSection from "./components/course-section/CourseSection";
+import StudentsCourse from "./components/students-course/StudentsCourse";
+import Categories from "./components/categories/Categories";
+import Instructor from "./components/instructor/Instructor";
+import Business from "./components/udemy-for-business/Business";
+import Footer from "./components/footer/Footer";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+      <Navbar />
+      <ContentHeader />
+      <CourseSection />
+      <StudentsCourse />
+      <Categories />
+      <Instructor />
+      <Business />
+      <Footer />
     </div>
   );
 }

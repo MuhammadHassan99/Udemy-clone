@@ -1,0 +1,159 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+@mixin flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+input:focus {
+  outline: none;
+}
+.js-pride-month-gradient {
+  width: 100%;
+  height: 0.4rem;
+  background: linear-gradient(
+    90deg,
+    rgb(100, 91, 83) 0%,
+    rgb(235, 82, 82) 18.23%,
+    rgb(247, 143, 47) 34.37%,
+    rgb(244, 193, 81) 48.96%,
+    rgb(82, 187, 118) 66.15%,
+    rgb(38, 165, 215) 82.29%,
+    rgb(224, 105, 183) 100%
+  );
+  z-index: 1010;
+}
+nav {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.08);
+  height: 72px;
+  padding-left: 20px;
+  padding-right: 20px;
+  @include flex();
+  justify-content: space-between;
+  .search-bar {
+    @include flex();
+  }
+  .other-udemies {
+    .links {
+      a {
+        color: black;
+      }
+      a:hover {
+        color: #0f7c90;
+      }
+      ul {
+        @include flex();
+        justify-content: space-evenly;
+        li {
+          padding: 15px;
+        }
+      }
+    }
+  }
+  .udemy-logo {
+    width: 96px;
+  }
+  .category {
+    color: black;
+    margin: 10px;
+  }
+  .category:hover {
+    color: #0f7c90;
+  }
+  .search-bar {
+    border: 1.5px solid gray;
+    border-radius: 25px;
+    background-color: rgb(240, 235, 235);
+    height: 40px;
+    width: 30rem;
+    position: relative;
+    form {
+      left: 10px;
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 100%;
+    }
+    button {
+      border: none;
+      background-color: inherit;
+    }
+    input {
+      border: none;
+      background-color: inherit;
+      padding-left: 10px;
+      margin: 5px;
+    }
+  }
+
+  .cart-icon {
+    width: 50px;
+    height: 20px;
+  }
+
+  .nav-btns {
+    padding-left: 20px;
+    @include flex();
+    justify-content: space-between;
+    a {
+      color: black;
+    }
+    .btn {
+      width: 80px;
+      padding: 10px;
+      font-weight: 700;
+      border-radius: 5px;
+      cursor: pointer;
+      margin: 5px;
+    }
+    .login-btn {
+      text-align: center;
+      border: 1px solid #0f7c90;
+      // a:hover {
+      //   color: #0b505c;
+      // }
+    }
+    .login-btn:hover {
+      border: 1px solid #0c515c;
+      a {
+        color: #094e5a;
+      }
+    }
+    .sign-up-btn {
+      text-align: center;
+      background-color: #0f7c90;
+
+      a {
+        color: white;
+        text-align: center;
+      }
+    }
+    .sign-up-btn:hover {
+      background-color: #0b5e6d;
+    }
+    .lng-btn {
+      text-align: center;
+      padding: 9px;
+      margin-left: 10px;
+      border: 1px solid lightgray;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    a {
+      color: #0f7c90;
+    }
+  }
+}
+.cart-icon:hover {
+  color: #0f7c90;
+}
